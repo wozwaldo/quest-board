@@ -1,6 +1,6 @@
 # Quest Tracker - React TypeScript App
 
-A modern, interactive quest tracking application built with React and TypeScript. Manage your daily quests with style using a retro-gaming inspired interface.
+It's a modern, interactive quest tracking application built with React and TypeScript I built to manage the daily quests with some retro-gaming aesthetics, making the process a little bit more interesting and fun. ^ ^
 
 ## Features
 
@@ -64,21 +64,7 @@ src/
 └── main.tsx               # Application entry point
 ```
 
-## Key Components
-
-### Quest Interface
-
-```typescript
-interface Quest {
-  id: number;
-  title: string;
-  description: string;
-}
-```
-
 ## Styling & Fun Elements
-
-The app features a custom retro gaming theme with:
 
 - Blue gradient color scheme (#2a03f4)
 - Typewriter text animations
@@ -87,8 +73,6 @@ The app features a custom retro gaming theme with:
 - Warning system alerts when you exceed 3 quests.
 
 ## 🔧 Development
-
-This project uses modern development tools:
 
 - **ESLint** for code linting
 - **Prettier** for code formatting

@@ -1,0 +1,222 @@
+@import 'tailwindcss';
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
+
+:root {
+  --font-mono: 'VT323', monospace;
+  --trash-t: 0.2s ease-in-out;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-family: var(--font-mono);
+}
+
+body {
+  min-height: 100vh;
+  background-image:
+    linear-gradient(#444df746 1px, transparent 1px),
+    linear-gradient(to right, #444df746 1px, #e5e5f7 1px);
+  background-size: 32px 32px;
+}
+
+.poppins-text {
+  font-family: 'Poppins', sans-serif;
+}
+
+.white-btn {
+  text-transform: uppercase;
+  background-color: white;
+  color: #2a03f4;
+  border: 1px solid #2a03f4;
+  transition: all 0.3s ease;
+}
+
+.white-btn:hover {
+  background-color: #2a03f4;
+  color: white;
+  border: 1px solid white;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.typewriter {
+  display: inline-block;
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 0.1em solid currentColor;
+  font-family:
+    ui-monospace, SFMono-Regular, Menlo, Consolas, 'Liberation Mono', monospace;
+  animation:
+    typing var(--d, 4s) steps(var(--n)) both,
+    caret 0.7s steps(1) infinite;
+}
+
+.typewriter__text {
+  letter-spacing: 0.1em;
+}
+
+.swiggle-stroke {
+  fill: rgba(255, 255, 255, 0.15);
+  stroke: rgba(255, 255, 255, 0.6);
+  stroke-width: 0.8;
+  stroke-dasharray: 265 0;
+  stroke-dashoffset: 0;
+  transition: all 0.5s ease-in-out;
+  vector-effect: non-scaling-stroke;
+}
+
+.group:hover .swiggle-stroke {
+  stroke-width: 0.8;
+  stroke-dasharray: 0 350;
+  stroke-dashoffset: 20;
+}
+
+.animate-fade-in-up {
+  animation: fadeInUp 1.2s cubic-bezier(0.68, -0.55, 0.265, 1.55) forwards;
+}
+
+/* Alternative Animation Options */
+.animate-fade-in-up-slow {
+  animation: fadeInUp 2s ease-out forwards;
+}
+
+.animate-fade-in-up-bouncy {
+  animation: fadeInUp 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.375) forwards;
+}
+
+.animate-fade-in-up-elastic {
+  animation: fadeInUp 1s cubic-bezier(0.68, -0.55, 0.265, 1.55) forwards;
+}
+
+.animate-fade-in-up-sharp {
+  animation: fadeInUp 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
+}
+
+.animate-fade-in-left-sharp {
+  animation: fadeInLeft 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
+}
+
+/* Delete Button Animations */
+.trash-box {
+  width: 20px;
+  height: 20px;
+  position: relative;
+}
+
+.trash-box .trash-top {
+  position: absolute;
+  top: 15%;
+  left: 50%;
+  width: 80%;
+  height: 15%;
+  background: white;
+  border-radius: 5px;
+  transform: translate(-50%, -15%);
+  transform-origin: left bottom;
+  transition: transform var(--trash-t);
+}
+
+.trash-box .trash-top::before {
+  content: '';
+  position: absolute;
+  bottom: 95%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 30%;
+  height: 80%;
+  background: white;
+  border-radius: 2px 2px 0 0;
+}
+
+.trash-box .trash-btm {
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  width: 70%;
+  height: 65%;
+  background: white;
+  border-radius: 2px;
+  transform: translate(-50%, -100%);
+  transform-origin: left 70%;
+  transition: transform var(--trash-t);
+}
+
+.trash-box .trash {
+  position: absolute;
+  top: 75%;
+  left: 44%;
+  width: 40%;
+  height: 40%;
+  background: #05df72;
+  border-radius: 2px;
+  transform: translate(-47%, -80%) rotate(35deg);
+  transition:
+    top var(--trash-t),
+    transform var(--trash-t);
+}
+.trash-box:hover .trash-top,
+button:hover .trash-box .trash-top {
+  transform: translate(-50%, -15%) rotate(-20deg);
+}
+
+.trash-box:hover .trash-btm,
+button:hover .trash-box .trash-btm {
+  transform: translate(-50%, -100%) rotate(5deg);
+}
+
+.trash-box:hover .trash,
+button:hover .trash-box .trash {
+  top: 50%;
+  transform: translate(-42%, -50%) rotate(35deg);
+}
+
+/* İç yapıyı oluşturan DOM (görsel için pseudo yapı) */
+.trash-box::before,
+.trash-box::after {
+  content: '';
+}
+
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(30px) scale(0.95);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+@keyframes fadeInLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-30px) scale(0.95);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0) scale(1);
+  }
+}
+
+@keyframes typing {
+  from {
+    width: 0ch;
+  }
+  to {
+    width: calc(var(--n) * 1ch);
+  }
+}
+
+@keyframes caret {
+  from,
+  to {
+    border-color: transparent;
+  }
+  50% {
+    border-color: currentColor;
+  }
+}

@@ -78,7 +78,3 @@ src/
 - **Prettier** for code formatting
 - **TypeScript** for type checking
 - **Vite** for fast builds and hot reload
-
----
-
-_"The quest log lies empty... Will you chart its course, adventurer?"_ 🗡️✨

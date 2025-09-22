@@ -22,5 +22,3 @@ const Header = ({ image, children }: HeaderProps) => {
 };
 
 export default Header;
-
-// <img src={image.src} alt={image.alt} />  yerine {...image} da olurdu. image için tanımladığımız tüm objeleri otomatik çekiyor.

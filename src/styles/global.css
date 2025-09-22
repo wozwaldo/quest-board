@@ -174,7 +174,6 @@ button:hover .trash-box .trash {
   transform: translate(-42%, -50%) rotate(35deg);
 }
 
-/* İç yapıyı oluşturan DOM (görsel için pseudo yapı) */
 .trash-box::before,
 .trash-box::after {
   content: '';

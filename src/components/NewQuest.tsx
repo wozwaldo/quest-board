@@ -14,7 +14,7 @@ const NewQuest = ({ onAddQuest }: NewQuestProps) => {
     const enteredQuest = quest.current!.value;
     const enteredSummary = summary.current!.value;
 
-    event.currentTarget.reset(); // form resets after adding a quest
+    event.currentTarget.reset();
 
     onAddQuest(enteredQuest, enteredSummary);
   };

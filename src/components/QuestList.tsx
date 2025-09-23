@@ -23,7 +23,8 @@ const QuestList = ({ quests, onDeleteQuest }: QuestListProps) => {
     warningBox = (
       <InfoBox mode="warning">
         <p>
-          Too many quests. Your stamina bar is empty. Take it easy, traveler.
+          Too many quests. Your stamina bar is getting low. Take it easy,
+          traveler.
         </p>
       </InfoBox>
     );

@@ -78,3 +78,7 @@ src/
 - **Prettier** for code formatting
 - **TypeScript** for type checking
 - **Vite** for fast builds and hot reload
+
+## Preview
+
+![Quest Board Screenshot](public/images/ss.png)
